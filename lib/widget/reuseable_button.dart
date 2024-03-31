@@ -19,12 +19,12 @@ class ReuseableButton extends StatelessWidget {
         onPressed: onTap,
         minWidth: size.width * 0.9,
         height: size.height * 0.07,
-        color: const Color(0xff141414),
+        color: Color(0xFFF9AC46),
         child: Text(
           text,
           style: const TextStyle(
             color: Colors.white,
-            fontSize: 18,
+            fontSize: 19,
             fontWeight: FontWeight.w500,
           ),
         ),

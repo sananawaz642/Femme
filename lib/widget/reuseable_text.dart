@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../utiles/constants.dart';
+import '../utils/Constants.dart';
 
 class ReuseableText extends StatelessWidget {
   const ReuseableText({super.key, required this.price});

@@ -6,8 +6,6 @@ import '../models/CategoriesModel.dart';
 import '../models/BaseModel.dart';
 import '../screens/details.dart';
 import '../dataApp/data.dart';
-import '../widget/add_to_cart.dart';
-import '../utiles/Constants.dart';
 
 
 class Home extends StatefulWidget{
@@ -45,7 +43,7 @@ class _HomeState extends State<Home> {
           height: size.height,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            // mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               FadeInUp(
                 delay: const Duration(milliseconds: 450),
@@ -56,132 +54,132 @@ class _HomeState extends State<Home> {
                   child: ListView.builder(
                       physics: const BouncingScrollPhysics(),
                       scrollDirection: Axis.horizontal,
-                      // itemCount: categories.length,
+                      itemCount: categories.length,
                       itemBuilder: (ctx, index) {
-                        // CategoriesModel current = categories[index];
-                        return const Padding(
-                          padding: EdgeInsets.all(10.0),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
-                            children:[
-                              Column(
-                              children: [
-                                InkWell(
-                                  // onTap: () {},
-                                  child: (
-                                  CircleAvatar(
-                                    radius: 35,
-                                    backgroundImage: AssetImage('assets/ImagesAll/shirt1.jpg'),
-                                  )
-                                  ),
-                                ),
-                                Text("Shirt"),
-                              ],
-                            ),
-                              Column(
-                                children: [
-                                  InkWell(
-                                    // onTap: () {},
-                                    child: (
-                                        CircleAvatar(
-                                          radius: 35,
-                                          backgroundImage: AssetImage('assets/ImagesAll/flat1.jpg'),
-                                        )
-                                    ),
-                                  ),
-                                  Text("Flat"),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  InkWell(
-                                    // onTap: () {},
-                                    child: (
-                                        CircleAvatar(
-                                          radius: 35,
-                                          backgroundImage: AssetImage('assets/ImagesAll/trouser1.jpg'),
-                                        )
-                                    ),
-                                  ),
-                                  Text("Trouser"),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  InkWell(
-                                    // onTap: () {},
-                                    child: (
-                                        CircleAvatar(
-                                          radius: 35,
-                                          backgroundImage: AssetImage('assets/ImagesAll/ethnic1.jpg'),
-                                        )
-                                    ),
-                                  ),
-                                  Text("Ethnic"),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  InkWell(
-                                    // onTap: () {},
-                                    child: (
-                                        CircleAvatar(
-                                          radius: 35,
-                                          backgroundImage: AssetImage('assets/ImagesAll/blazer1.jpg'),
-                                        )
-                                    ),
-                                  ),
-                                  Text("Blazer"),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  InkWell(
-                                    // onTap: () {},
-                                    child: (
-                                        CircleAvatar(
-                                          radius: 35,
-                                          backgroundImage: AssetImage('assets/ImagesAll/bag1.jpg'),
-                                        )
-                                    ),
-                                  ),
-                                  Text("bag"),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  InkWell(
-                                    // onTap: () {},
-                                    child: (
-                                        CircleAvatar(
-                                          radius: 35,
-                                          backgroundImage: AssetImage('assets/ImagesAll/sneaker1.jpg'),
-                                        )
-                                    ),
-                                  ),
-                                  Text("Sneaker"),
-                                ],
-                              ),
-
-                            ]
-                          )
-                          // child: Column(
-                          //   children: [
-                          //     CircleAvatar(
-                          //       radius: 35,
-                          //       backgroundImage: AssetImage(current.ImageURL),
+                        CategoriesModel current = categories[index];
+                        return  Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          // child: Row(
+                          //   crossAxisAlignment: CrossAxisAlignment.stretch,
+                          //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          //
+                          //   children:[
+                          //     Column(
+                          //     children: [
+                          //       InkWell(
+                          //         // onTap: () {},
+                          //         child: (
+                          //         CircleAvatar(
+                          //           radius: 35,
+                          //           backgroundImage: AssetImage('assets/ImagesAll/shirt1.jpg'),
+                          //         )
+                          //         ),
+                          //       ),
+                          //       Text("Shirt"),
+                          //     ],
+                          //   ),
+                          //     Column(
+                          //       children: [
+                          //         InkWell(
+                          //           // onTap: () {},
+                          //           child: (
+                          //               CircleAvatar(
+                          //                 radius: 35,
+                          //                 backgroundImage: AssetImage('assets/ImagesAll/flat1.jpg'),
+                          //               )
+                          //           ),
+                          //         ),
+                          //         Text("Flat"),
+                          //       ],
                           //     ),
-                          //     SizedBox(
-                          //       height: size.height * 0.008,
+                          //     Column(
+                          //       children: [
+                          //         InkWell(
+                          //           // onTap: () {},
+                          //           child: (
+                          //               CircleAvatar(
+                          //                 radius: 35,
+                          //                 backgroundImage: AssetImage('assets/ImagesAll/trouser1.jpg'),
+                          //               )
+                          //           ),
+                          //         ),
+                          //         Text("Trouser"),
+                          //       ],
                           //     ),
-                          //     Text(
-                          //       current.Title,
-                          //       style: textTheme.subtitle1,
+                          //     Column(
+                          //       children: [
+                          //         InkWell(
+                          //           // onTap: () {},
+                          //           child: (
+                          //               CircleAvatar(
+                          //                 radius: 35,
+                          //                 backgroundImage: AssetImage('assets/ImagesAll/ethnic1.jpg'),
+                          //               )
+                          //           ),
+                          //         ),
+                          //         Text("Ethnic"),
+                          //       ],
                           //     ),
-                          //   ],
-                          // ),
+                          //     Column(
+                          //       children: [
+                          //         InkWell(
+                          //           // onTap: () {},
+                          //           child: (
+                          //               CircleAvatar(
+                          //                 radius: 35,
+                          //                 backgroundImage: AssetImage('assets/ImagesAll/blazer1.jpg'),
+                          //               )
+                          //           ),
+                          //         ),
+                          //         Text("Blazer"),
+                          //       ],
+                          //     ),
+                          //     Column(
+                          //       children: [
+                          //         InkWell(
+                          //           // onTap: () {},
+                          //           child: (
+                          //               CircleAvatar(
+                          //                 radius: 35,
+                          //                 backgroundImage: AssetImage('assets/ImagesAll/bag1.jpg'),
+                          //               )
+                          //           ),
+                          //         ),
+                          //         Text("bag"),
+                          //       ],
+                          //     ),
+                          //     Column(
+                          //       children: [
+                          //         InkWell(
+                          //           // onTap: () {},
+                          //           child: (
+                          //               CircleAvatar(
+                          //                 radius: 35,
+                          //                 backgroundImage: AssetImage('assets/ImagesAll/sneaker1.jpg'),
+                          //               )
+                          //           ),
+                          //         ),
+                          //         Text("Sneaker"),
+                          //       ],
+                          //     ),
+                          //
+                          //   ]
+                          // )
+                          child: Column(
+                            children: [
+                              CircleAvatar(
+                                radius: 35,
+                                backgroundImage: AssetImage(current.ImageURL),
+                              ),
+                              SizedBox(
+                                height: size.height * 0.001,
+                              ),
+                              Text(
+                                current.Title,
+                                style: textTheme.subtitle1,
+                              ),
+                            ],
+                          ),
                         );
                       }
                   ),
@@ -210,80 +208,82 @@ class _HomeState extends State<Home> {
               FadeInUp(
 
                 delay: const Duration(milliseconds: 750),
-                  child: Container(
-                    margin: const EdgeInsets.only(top: 5.0),
-                    width: size.width,
-                    height: size.height * 0.63,
-                    child: GridView.builder(
-                      physics: const BouncingScrollPhysics(),
-                      itemCount: mainList.length,
-                        gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          childAspectRatio: 0.63,
-                        ),
-                        itemBuilder: (context, index){
-                        BaseModel current = mainList[index];
-                        return GestureDetector(
-                            onTap: (() => Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) {
-                            FocusManager.instance.primaryFocus?.unfocus();
-                            return Details(
-                              data: current,
-                              isCameFromMostPopularPart: true,
-                            );
-                          }),
-                        )),
-                          child: Hero(
-                            tag: current.imageUrl,
-                            child: Column(
-                              children: [
-                                Container(
-                                  width: size.width * 0.5,
-                                  height: size.height * 0.3,
-                                  margin: const EdgeInsets.all(10),
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(3),
-                                    image: DecorationImage(
-                                      image: AssetImage(current.imageUrl),
-                                      fit: BoxFit.cover,
+                  child: SingleChildScrollView(
+                    child: Container(
+                      // margin: const EdgeInsets.only(top: 10.0),
+                      width: size.width,
+                      height: size.height * 0.62,
+                      child: GridView.builder(
+                        physics: const BouncingScrollPhysics(),
+                        itemCount: mainList.length,
+                          gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            childAspectRatio: 0.63,
+                          ),
+                          itemBuilder: (context, index){
+                          BaseModel current = mainList[index];
+                          return GestureDetector(
+                              onTap: (() => Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) {
+                              FocusManager.instance.primaryFocus?.unfocus();
+                              return Details(
+                                data: current,
+                                isCameFromMostPopularPart: true,
+                              );
+                            }),
+                          )),
+                            child: Hero(
+                              tag: current.imageUrl,
+                              child: Column(
+                                children: [
+                                  Container(
+                                    width: size.width * 0.5,
+                                    height: size.height * 0.3,
+                                    margin: const EdgeInsets.all(10),
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(3),
+                                      image: DecorationImage(
+                                        image: AssetImage(current.imageUrl),
+                                        fit: BoxFit.cover,
+                                      ),
                                     ),
                                   ),
-                                ),
-
-                                Padding(
-                                    padding: const EdgeInsets.only(top: 2.0),
-                                child: Text(
-                                  current.name,
-                                  style: const TextStyle(fontSize: 15,
-                                  color: Colors.black),
-                                ),
-                                ),
-                                RichText(
-                                    text: TextSpan(
-                                        text: "Rs ",
-                                        style: textTheme.subtitle2?.copyWith(
-                                          color: primaryColor,
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                        children: [
-                                          TextSpan(
-                                            text: current.price.toString(),
-                                            style: textTheme.subtitle2?.copyWith(
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          )
-                                        ]
-                                    )
-                                ),
-                              ],
+                    
+                                  Padding(
+                                      padding: const EdgeInsets.only(top: 2.0),
+                                  child: Text(
+                                    current.name,
+                                    style: const TextStyle(fontSize: 15,
+                                    color: Colors.black),
+                                  ),
+                                  ),
+                                  RichText(
+                                      text: TextSpan(
+                                          text: "Rs ",
+                                          style: textTheme.subtitle2?.copyWith(
+                                            color: Colors.black,
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                          children: [
+                                            TextSpan(
+                                              text: current.price.toString(),
+                                              style: textTheme.subtitle2?.copyWith(
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            )
+                                          ]
+                                      )
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-
-                        );
-                    },
+                    
+                          );
+                      },
+                      ),
                     ),
                   )
               ),

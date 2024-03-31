@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 
 import '../models/BaseModel.dart';
-import '../utiles/constants.dart';
+import '../utils/Constants.dart';
 import '../widget/add_to_cart.dart';
 import '../dataApp/data.dart';
 import '../screens/details.dart';
@@ -169,7 +169,7 @@ class _SearchState extends State<Search> {
                                   bottom: size.height * 0.01,
                                   child: RichText(
                                       text: TextSpan(
-                                          text: "€",
+                                          text: "Rs",
                                           style:
                                           textTheme.subtitle2?.copyWith(
                                             color: primaryColor,
@@ -221,7 +221,7 @@ class _SearchState extends State<Search> {
                       delay: const Duration(milliseconds: 200),
                       child: const Image(
                         image:
-                        AssetImage("assets/images/search_fail.png"),
+                        AssetImage("assets/ImagesAll/search_fail.png"),
                         fit: BoxFit.cover,
                       ),
                     ),

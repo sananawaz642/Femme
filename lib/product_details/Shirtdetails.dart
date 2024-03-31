@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 import '../models/ShirtModel.dart';
-import '../utiles/constants.dart';
+import '../utils/Constants.dart';
 import '../widget/reuseable_text.dart';
 import '../widget/reuseable_button.dart';
 import '../widget/shirt_add_to_cart.dart';

@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../models/ShirtModel.dart';
-import '../utiles/Constants.dart';
+import '../utils/Constants.dart';
 import '../dataApp/data.dart';
 import 'details.dart';
 import '../product_details/Shirtdetails.dart';

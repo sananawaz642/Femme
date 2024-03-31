@@ -1,4 +1,4 @@
-import 'package:femme_style/utiles/constants.dart';
+import 'package:femme_style/utils/Constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../screens/Shirt.dart';

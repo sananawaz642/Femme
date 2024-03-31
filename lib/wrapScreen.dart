@@ -30,6 +30,7 @@ class homeScreenpage extends State<homeScreen>{
     return Scaffold(
       drawer: const NavBar(),
       appBar: AppBar(
+
         title: isSearchActive
             ? FadeIn(
           delay: const Duration(milliseconds: 300),
@@ -54,14 +55,6 @@ class homeScreenpage extends State<homeScreen>{
         ),
         backgroundColor: Colors.white,
         elevation: 0,
-        // leading: IconButton(
-        //   onPressed: () {},
-        //   icon: const Icon(
-        //     Icons.menu,
-        //     color: Colors.black,
-        //     size: 30,
-        //   ),
-        // ),
         actions: [
           IconButton(
             onPressed: () {

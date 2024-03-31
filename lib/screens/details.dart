@@ -2,7 +2,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
 import '../models/BaseModel.dart';
-import '../utiles/constants.dart';
+import '../utils/Constants.dart';
 import '../widget/add_to_cart.dart';
 import '../widget/reuseable_text.dart';
 import '../widget/reuseable_button.dart';

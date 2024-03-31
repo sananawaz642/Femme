@@ -6,11 +6,11 @@ class TrouserModel {
   final double review;
   final double star;
   final String description;
-  // final String Shirt;
   final String Fabric;
   final String Color;
   final String height;
   final String wear;
+  final String note;
   int value;
 
   TrouserModel( {
@@ -21,11 +21,11 @@ class TrouserModel {
     required this.review,
     required this.star,
     required this.description,
-    // required this.Shirt,
     required this.Fabric,
     required this.Color,
     required this.height,
     required this.wear,
+    required this.note,
     required this.value
   });
 }
