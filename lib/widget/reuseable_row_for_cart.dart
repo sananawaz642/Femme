@@ -4,10 +4,10 @@ import 'reuseable_text.dart';
 
 class ReuseableRowForCart extends StatelessWidget {
   const ReuseableRowForCart({
-    Key? key,
+    super.key,
     required this.text,
     required this.price,
-  }) : super(key: key);
+  });
 
   final double price;
   final String text;
@@ -21,7 +21,7 @@ class ReuseableRowForCart extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(text,
-              style: textTheme.headline5
+              style: textTheme.headlineSmall
                   ?.copyWith(color: Colors.grey, fontSize: 16)),
           ReuseableText(
             price: price,

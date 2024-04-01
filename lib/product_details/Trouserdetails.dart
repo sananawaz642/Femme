@@ -1,12 +1,8 @@
-import 'dart:ui';
 
 import 'package:animate_do/animate_do.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import '../models/TrouserModel.dart';
-import '../utils/Constants.dart';
 import '../widget/reuseable_text.dart';
 import '../widget/reuseable_button.dart';
 import '../widget/trouser_add_to_cart.dart';
@@ -103,7 +99,7 @@ class _TrouserDetailsState extends State<TrouserDetails> {
                           children: [
                             Text(
                               current.name,
-                              style: textTheme.headline3?.copyWith(fontSize: 19,
+                              style: textTheme.displaySmall?.copyWith(fontSize: 19,
                                   fontWeight: FontWeight.bold),
                             ),
                             ReuseableText(

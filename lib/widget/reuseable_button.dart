@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 
 class ReuseableButton extends StatelessWidget {
   const ReuseableButton({
-    Key? key,
+    super.key,
     required this.text, required this.onTap,
-  }) : super(key: key);
+  });
 
   final String text;
   final VoidCallback onTap;
@@ -19,7 +19,7 @@ class ReuseableButton extends StatelessWidget {
         onPressed: onTap,
         minWidth: size.width * 0.9,
         height: size.height * 0.07,
-        color: Color(0xFFF9AC46),
+        color: const Color(0xFFF9AC46),
         child: Text(
           text,
           style: const TextStyle(

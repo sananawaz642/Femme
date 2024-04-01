@@ -1,10 +1,11 @@
 // import 'dart:js';
-import 'package:femme_style/screens/home.dart';
 import 'package:femme_style/wrapScreen.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:get/get.dart';
 import 'dart:async';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'controllers/cart_controller.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 void main() {
@@ -18,6 +19,10 @@ class FlutterApp extends StatefulWidget{
 }
 
 class FlutterAppState extends State<FlutterApp> {
+   //--start -- Kasif's Code
+  var controller = Get.put(CartController());
+  //---end
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -58,7 +63,7 @@ class splashscreen extends State<SplashScreen>{
   Widget build(BuildContext context) {
     return Scaffold(
       body:  Container(
-        color: Color(0xFFF9AC46),
+        color: const Color(0xFFF9AC46),
           child: const Center(child: Text("Femme Style",
             style: TextStyle(color: Colors.white,
                 fontFamily: "fontMain",
@@ -121,7 +126,7 @@ class DashBoardScreenState extends State<DashBoardScreen> {
           height: 340,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            color: Color(0xFFF9AC46),
+            color: const Color(0xFFF9AC46),
           ),
           margin: const EdgeInsets.only(left: 10,right: 10,top: 200),
         

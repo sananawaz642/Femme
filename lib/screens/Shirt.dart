@@ -1,11 +1,9 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../models/ShirtModel.dart';
 import '../utils/Constants.dart';
 import '../dataApp/data.dart';
-import 'details.dart';
 import '../product_details/Shirtdetails.dart';
 
 
@@ -106,7 +104,7 @@ class ShirtState extends State<Shirt> {
 
                                   text: TextSpan(
                                       text: "Rs ",
-                                      style: textTheme.subtitle2?.copyWith(
+                                      style: textTheme.titleSmall?.copyWith(
                                         color: primaryColor,
                                         fontSize: 18,
                                         // fontWeight: FontWeight.bold,
@@ -114,7 +112,7 @@ class ShirtState extends State<Shirt> {
                                       children: [
                                         TextSpan(
                                           text: current.price.toString(),
-                                          style: textTheme.subtitle2?.copyWith(
+                                          style: textTheme.titleSmall?.copyWith(
                                             fontWeight: FontWeight.bold,
                                           ),
                                         )

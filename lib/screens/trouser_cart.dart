@@ -1,6 +1,5 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:line_icons/line_icons.dart';
 
 import '../models/TrouserModel.dart';
@@ -204,7 +203,7 @@ class _TrouserCartState extends State<TrouserCart> {
                                       text: TextSpan(
                                           text: "Rs ",
                                           style:
-                                          textTheme.subtitle2?.copyWith(
+                                          textTheme.titleSmall?.copyWith(
                                             fontSize: 20,
                                             color: primaryColor,
                                             fontWeight: FontWeight.bold,
@@ -213,7 +212,7 @@ class _TrouserCartState extends State<TrouserCart> {
                                             TextSpan(
                                               text: current.price.toString(),
                                               style:
-                                              textTheme.subtitle2?.copyWith(
+                                              textTheme.titleSmall?.copyWith(
                                                 fontSize: 17,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -224,7 +223,7 @@ class _TrouserCartState extends State<TrouserCart> {
                                   ),
                                   Text(
                                     "Size = ${sizes[3]}",
-                                    style: textTheme.subtitle2?.copyWith(
+                                    style: textTheme.titleSmall?.copyWith(
                                       fontSize: 14,
                                       color: Colors.grey,
                                       fontWeight: FontWeight.w400,
@@ -275,7 +274,7 @@ class _TrouserCartState extends State<TrouserCart> {
                                               size.width * 0.02),
                                           child: Text(
                                             current.value.toString(),
-                                            style: textTheme.subtitle2
+                                            style: textTheme.titleSmall
                                                 ?.copyWith(
                                               fontSize: 15,
                                               fontWeight: FontWeight.w600,

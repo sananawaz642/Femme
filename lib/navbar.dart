@@ -1,5 +1,3 @@
-import 'package:femme_style/utils/Constants.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../screens/Shirt.dart';
 import '../screens/Trouser.dart';

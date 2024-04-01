@@ -1,4 +1,4 @@
-import '../models/CategoriesModel.dart';
+import '../models/categories_model.dart';
 import '../models/BaseModel.dart';
 import '../models/ShirtModel.dart';
 import '../models/TrouserModel.dart';
@@ -9,30 +9,30 @@ import '../models/TrouserModel.dart';
 
 List<CategoriesModel> categories = [
     CategoriesModel(
-    ImageURL: "assets/ImagesAll/shirt1.jpg",
-        Title: 'Shirt',
+    imageURL: "assets/ImagesAll/shirt1.jpg",
+        title: 'Shirt',
 ),
     CategoriesModel(
-        ImageURL: "assets/ImagesAll/flat1.jpg",
-        Title: 'Flat',
+        imageURL: "assets/ImagesAll/flat1.jpg",
+        title: 'Flat',
     ),
     CategoriesModel(
-        ImageURL: "assets/ImagesAll/trouser1.jpg",
-        Title: 'Trouser',
+        imageURL: "assets/ImagesAll/trouser1.jpg",
+        title: 'Trouser',
     ),
     CategoriesModel(
-        ImageURL: "assets/ImagesAll/ethnic1.jpg",
-        Title: 'Ethnic',
+        imageURL: "assets/ImagesAll/ethnic1.jpg",
+        title: 'Ethnic',
     ),CategoriesModel(
-        ImageURL: "assets/ImagesAll/blazer1.jpg",
-        Title: 'Blazer',
+        imageURL: "assets/ImagesAll/blazer1.jpg",
+        title: 'Blazer',
     ),CategoriesModel(
-        ImageURL: "assets/ImagesAll/bag1.jpg",
-        Title: 'Bag',
+        imageURL: "assets/ImagesAll/bag1.jpg",
+        title: 'Bag',
     ),
     CategoriesModel(
-        ImageURL: "assets/ImagesAll/sneaker1.jpg",
-        Title: 'Sneaker',
+        imageURL: "assets/ImagesAll/sneaker1.jpg",
+        title: 'Sneaker',
     ),
 ];
 

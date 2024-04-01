@@ -1,12 +1,8 @@
-import 'dart:ui';
 
 import 'package:animate_do/animate_do.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import '../models/ShirtModel.dart';
-import '../utils/Constants.dart';
 import '../widget/reuseable_text.dart';
 import '../widget/reuseable_button.dart';
 import '../widget/shirt_add_to_cart.dart';
@@ -95,7 +91,7 @@ class _ShirtDetailsState extends State<ShirtDetails> {
                           children: [
                             Text(
                               current.name,
-                              style: textTheme.headline3?.copyWith(fontSize: 22),
+                              style: textTheme.displaySmall?.copyWith(fontSize: 22),
                             ),
                             ReuseableText(
                               price: current.price,
@@ -241,6 +237,8 @@ class _ShirtDetailsState extends State<ShirtDetails> {
                   child: ReuseableButton(
                     text: "Add to cart",
                     onTap: () {
+                      // var cartController = Get.find<CartController>();
+                      // cartController.addItemToCart(BaseModel(id: id, imageUrl: imageUrl, name: name, price: price, review: review, star: star, value: value))
                       ShirtAddToCart.shirtaddtocart(current, context);
                     },
                   ),

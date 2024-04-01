@@ -1,24 +1,25 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:femme_style/wrapScreen.dart';
 import 'package:flutter/material.dart';
+import '../controllers/cart_controller.dart';
 import '../widget/reuseable_button.dart';
 import 'cart.dart';
 import 'package:get/get.dart';
-import 'home.dart';
 
 
 
-class Info extends StatefulWidget{
+class OrderDetailScreen extends StatefulWidget{
+  const OrderDetailScreen({super.key});
 
   @override
-  State<Info> createState() => _InfoState();
+  State<OrderDetailScreen> createState() => _OrderDetailScreenState();
 }
 
-class _InfoState extends State<Info> {
-  final Cart controller = Get.put(Cart());
+class _OrderDetailScreenState extends State<OrderDetailScreen> {
+
   @override
   Widget build(BuildContext context) {
-    // print(Get.arguments);
+    // print('Args Value: ${Get.arguments}');
     return Scaffold(
       appBar: AppBar(
         title: const Text("Checkout",
@@ -32,11 +33,10 @@ class _InfoState extends State<Info> {
           children: [
             Row(
               children: [
-
                 FadeInUp(
                   delay: const Duration(milliseconds: 200),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 15.0),
+                  child: const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 15.0),
                     child: Text("Your Total bill is ", style: TextStyle(
                       fontSize: 20,
                     ),
@@ -47,9 +47,13 @@ class _InfoState extends State<Info> {
                   delay: const Duration(milliseconds: 200),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 15.0),
-                    child: Text(controller.calculateTotalPrice(), style: TextStyle(
-                      fontSize: 20,
-                    ),
+                    child: GetBuilder<CartController>(
+                      builder: (controller) {
+                        return Text(controller.calculateTotalPrice().toString(), style: const TextStyle(
+                          fontSize: 20,
+                        ),
+                        );
+                      }
                     ),
                   ),
                 ),
@@ -66,7 +70,7 @@ class _InfoState extends State<Info> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => Cart()));
+                              builder: (context) => const Cart()));
                     }),
               ),
             ),
@@ -80,7 +84,7 @@ class _InfoState extends State<Info> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => homeScreen()));
+                              builder: (context) => const homeScreen()));
                     }),
               ),
             )
